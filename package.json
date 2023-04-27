@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/dat.gui": "^0.7.7",
     "@types/glob": "^8.1.0",
     "@types/three": "^0.149.0",
+    "dat.gui": "^0.7.9",
     "import-glob": "^1.5.0",
     "three": "^0.150.1",
     "ts-loader": "^9.4.2",
