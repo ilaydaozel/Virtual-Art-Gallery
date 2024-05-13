@@ -23,19 +23,44 @@
             #startButton {
                 height: 200px;
                 width: 500px;
-                margin: -25px -100px;
                 position: relative;
-                font-size: 64px;
+                font-size: 40px;
                 border-radius: 50px;
                 top: 50%;
                 left: 50%;
+                transform: translate(-50%, -50%);
             }
+
+            .arrows-container {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 24px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+        .arrow {
+            width: 30%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+         }
         </style>
     </head>
 
     <body>
         <div id="menuPanel">
             <button id="startButton">Click to Start</button>
+            <div class="arrows-container">
+                <div id="upArrow" class="arrow">&#8593;</div>
+                <div id="downArrow" class="arrow">&#8595;</div>
+                <div id="leftArrow" class="arrow">&#8592;</div>
+                <div id="rightArrow" class="arrow">&#8594;</div>
+            </div>
         </div>
         <script type="module" src="bundle.js"></script>
     </body>
