@@ -34,7 +34,7 @@ export const createAndHangPaintings = (
     const artwork: IArtwork = artworks[i];
     const artworkWidth: number = artwork.width ? artwork.width / 5 : 10;
     const artworkHeight: number = artwork.height ? artwork.height / 5 : 10;
-    const painting = createPainting(artwork.artworkMedias[0], {
+    const painting = createPainting(artwork.url, {
       width: artworkWidth,
       height: artworkHeight,
     });

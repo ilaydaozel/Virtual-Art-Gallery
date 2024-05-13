@@ -3,6 +3,7 @@ import { PointerLockControls } from 'three/examples/jsm/controls/PointerLockCont
 import { GUI } from 'dat.gui'
 import {createInitialRoomLight} from './../components/Light'
 import {createRoom, createWall} from "./../components/Room"
+import artworks from '../data/artworks';
 
 
 
@@ -48,7 +49,6 @@ const floorDimensions = { width: 40, height: 50 };
 const {ceiling, floor, walls } = createRoom(floorDimensions);
 scene.add(ceiling, floor, walls)
 
-const artworks = ['a', 'b', 'c']
 const artworkPlanes = []
 let ZCount = -10;
 
@@ -91,7 +91,7 @@ spotLightFolder.open()
 for (let i = 0; i < artworks.length; i++) {
 
     const planeGeometry = new THREE.BoxGeometry(7, 7, 0.3)
-    const artTexture = new THREE.TextureLoader().load('img/artwork/' + artworks[i] + '.jpg')
+    const artTexture = new THREE.TextureLoader().load(artworks[i].url)
     const artworkMaterial = new THREE.MeshPhongMaterial()
     artworkMaterial.map = artTexture
     const artwork = new THREE.Mesh(planeGeometry, artworkMaterial)
@@ -103,7 +103,6 @@ for (let i = 0; i < artworks.length; i++) {
     ZCount += 12;
     artworkPlanes.push(artwork)
 }
-
 
 
 const onKeyDown = function (event: KeyboardEvent) {
